@@ -1,7 +1,7 @@
 name: "triggers - Exercice 1"
 on:
   schedule:
-  - cron: "46 17 * * 1-5"
+  - cron: "50 * * * *"
 jobs:
   stale:
     runs-on: ubuntu-latest
