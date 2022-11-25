@@ -1,9 +1,10 @@
 name: 'triggers - exercice 2'
 on:
- push:
- pull_request: 
+  push:
+  pull_request:
+  - branch: main
 jobs:
- stale:
-  runs-on: ubuntu-latest
-  steps:
-  - run: echo "je vérifie  que tout marche bien"
+  check:
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo "je vérifie  que tout marche bien"
