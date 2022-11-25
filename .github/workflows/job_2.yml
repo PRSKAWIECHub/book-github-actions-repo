@@ -1,16 +1,13 @@
 name: "Job - Exercice 2"
 on:
   workflow_dispatch:
-    inputs:
-      day0fWeek:
-        description: 'param1'
-        required: true
-        default: $(date +%u)
 jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-    - run: if ($day0fWeek > 7)
+    - name: Get current date
+      id: date
+      run: if ($(date +%u) > 5)
            then
              exit 1
            else
