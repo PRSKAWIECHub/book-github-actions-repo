@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     needs: job1
     steps:
-  - run: cat test.txt
+    - run: cat test.txt
