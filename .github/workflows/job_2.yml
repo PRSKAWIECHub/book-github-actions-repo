@@ -13,6 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
+          echo "??"
           dayOfWeek=$(date +%u) # calcule le jour de la semaine au format chiffre
           echo "?"
           if ($dayOfWeek > 4)
