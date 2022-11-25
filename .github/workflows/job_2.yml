@@ -16,7 +16,10 @@ jobs:
           dayOfWeek=$(date +%u) # calcule le jour de la semaine au format chiffre
           if ($dayOfWeek > 4)
           then
+            echo "OK"
             exit 1
+          else
+            echo "KO"            
           fi
   job2:
     needs: job1
