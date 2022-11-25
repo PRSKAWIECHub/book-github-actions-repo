@@ -17,8 +17,10 @@ jobs:
           if ($dayOfWeek > 4)
           then
             echo "OK"
+            echo "$dayOfWeek"
             exit 1
           else
+            echo "$dayOfWeek"
             echo "KO"            
           fi
   job2:
