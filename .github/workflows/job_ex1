@@ -2,6 +2,7 @@ name: "Job - Exercice 1"
 on:
   push:
   pull_request:
+  
 jobs:
   job1:
     runs-on: ubuntu-latest
