@@ -1,13 +1,21 @@
 name: "Job - Exercice 2"
 on:
-  push:
-  pull_request:
-  
+  workflow_dispatch:
+    inputs:
+      day0fWeek:
+        description: 'param1'
+        required: true
+        default: $(date +%u)
 jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-    - run: echo "Bonjour"
+    - run: if ($day0fWeek > 5)
+           then
+             exit 1
+           else
+             echo "Bonjour"
+           fi
   job2:
     needs: job1
     if: failure()
