@@ -18,7 +18,6 @@ jobs:
           then
             echo "OK"
             echo "$dayOfWeek"
-            exit 1
           else
             echo "$dayOfWeek"
             echo "KO"            
