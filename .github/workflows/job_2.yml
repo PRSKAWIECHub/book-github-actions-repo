@@ -12,14 +12,12 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-    - name: Get current date
-      id: date
-      run: if ($(date +'%u') > 5)
-           then
-             exit 1
-           else
-             echo "Bonjour"
-           fi
+      - run: |
+          dayOfWeek=$(date +%u) # calcule le jour de la semaine au format chiffre
+          if ($dayOfWeek > 5)
+          then
+            exit 1
+          fi
   job2:
     needs: job1
     if: failure()
