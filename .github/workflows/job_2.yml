@@ -2,6 +2,13 @@ name: "Job - Exercice 2"
 on:
   workflow_dispatch:
 jobs:
+  job0:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Get current date
+      id: date
+      run: |
+        echo "{date}={$(date +'%Y-%m-%d')}"
   job1:
     runs-on: ubuntu-latest
     steps:
