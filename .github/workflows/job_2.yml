@@ -10,7 +10,7 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-    - run: if ($day0fWeek > 5)
+    - run: if ($day0fWeek > 7)
            then
              exit 1
            else
