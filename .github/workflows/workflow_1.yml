@@ -3,16 +3,16 @@ on:
     branches: [main]
   pull_request:
     branches: [main]
-  workflow_dispach:
+  workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
-steps:
-- uses: actions/setup-node@v3
-- name: Use Node.js
-- run: npm install
-- run: gulp build
-- uses: actions/upload-artifact@v3
-  with:
-  name: Package_1_1
-  path: dest
+    steps:
+    - uses: actions/setup-node@v3
+    - name: Use Node.js
+    - run: npm install
+    - run: gulp build
+    - uses: actions/upload-artifact@v3
+      with:
+        name: Package_1_1
+        path: dest
