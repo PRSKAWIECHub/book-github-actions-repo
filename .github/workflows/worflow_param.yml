@@ -9,9 +9,8 @@ on:
       myParam2:
         description: 'my second param'
         required: true
-        default: 'hello2'
-    jobs:
-      my-job:
-        runs-on: ubuntu-latest
-        steps:
-        - run: echo "${{ github.event.inputs.myParam }} ${{ github.event.inputs.myParam2 }}"
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo "${{ github.event.inputs.myParam }} ${{ github.event.inputs.myParam2 }}"
