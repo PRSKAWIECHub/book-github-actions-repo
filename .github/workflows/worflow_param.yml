@@ -4,7 +4,7 @@ on:
     inputs:
       myParam:
         description: 'my first param'
-        required: true:
+        required: true
         default: 'hello'
       myParam2:
         description:'my second param'
