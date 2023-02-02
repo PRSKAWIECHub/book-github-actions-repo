@@ -27,4 +27,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: echo "${{ github.event.inputs.myParam }} ${{ github.event.inputs.myParam2 }}"
-    - run: Ce workflow va saluer ${{ inputs.name }} de la part @${{ github.actor }}
+    - run-name: Ce workflow va saluer ${{ inputs.name }} de la part @${{ github.actor }}
