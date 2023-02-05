@@ -1,4 +1,4 @@
-name: "job exo 2"
+name: job_exo_2
 jobs:
   job0:
     runs-on: ubuntu-latest
