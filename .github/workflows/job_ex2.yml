@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: |
-      if ($dayOfWeek > 5)
+      if ($(date +%u) > 5)
       then
         exit 1
       fi
