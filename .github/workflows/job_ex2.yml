@@ -1,4 +1,9 @@
 name: job_exo_2
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
 jobs:
   job0:
     runs-on: ubuntu-latest
