@@ -2,7 +2,7 @@ name: "triggers - exercice 2"
 on:
   push:
   pull_request:
-    branches
+    branches:
     - main
 jobs:
   stale:
