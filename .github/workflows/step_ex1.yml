@@ -1,0 +1,10 @@
+name: affichage console
+on:
+  workflow_dispatch:
+jobs:
+  Message:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: lgmorand/github-action-hello@v2
+      with:
+        firstname: jean
