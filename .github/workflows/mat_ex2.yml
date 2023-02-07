@@ -10,11 +10,11 @@ jobs:
         node: [10,12]
         include:
           - os: macos-latest
-            node:8
-         exclude:
+            node: 8
+        exclude:
            - os: macos-latest
              node: 10
            - os: macos.latest
              node: 8
-      steps:
-      - run: echo "Je m'execute sur ${{ matrix.os }} avec la version node ${{ matrix.node }}" 
+    steps:
+    - run: echo "Je m'execute sur ${{ matrix.os }} avec la version node ${{ matrix.node }}" 
