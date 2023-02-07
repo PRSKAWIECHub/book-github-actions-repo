@@ -1,0 +1,23 @@
+name: "matrix - exercice 1"
+jobs:
+  build:
+    strategy:
+      matrix:
+        dotnet: [4.2.x, 5.0.x]
+        buildMode: [Debug, Release]
+  steps:
+  - name: Récupère le code source
+    uses: actions/checkout@v3
+  - name: Install .NET
+    uses: actions/setup-dotnet@v3
+    with:
+      dotnet-version: ${{ matrix.dotnet }}
+  - name: Restore dependencies
+    run: dotnet restore  
+  - name: Build
+    run: dotnet build --no-restore --configuration ${{ env.buildMode }}
+    env: 
+      buildMode: ${{ matrix.buildMode }}
+  
+  
+     
