@@ -9,18 +9,18 @@ jobs:
         buildMode: [Debug, Release]
     runs-on: windows-latest
     steps:
-    - name: Récupère le code source
-      uses: actions/checkout@v3
-    - name: Install .NET
-      uses: actions/setup-dotnet@v3
-      with:
-        dotnet-version: ${{ matrix.dotnet }}
-    - name: Restore dependencies
-      run: dotnet restore  
-    - name: Build
-      run: dotnet build --no-restore --configuration ${{ env.buildMode }}
-      env: 
-        buildMode: ${{ matrix.buildMode }}
+     - name: Récupère le code source
+       uses: actions/checkout@v3
+     - name: Install .NET
+       uses: actions/setup-dotnet@v3
+       with:
+         dotnet-version: ${{ matrix.dotnet }}
+     - name: Restore dependencies
+       run: dotnet restore  
+     - name: Build
+       run: dotnet build --no-restore --configuration ${{ env.buildMode }}
+       env: 
+         buildMode: ${{ matrix.buildMode }}
   
   
      
