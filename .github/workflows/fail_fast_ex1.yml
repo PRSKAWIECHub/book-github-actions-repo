@@ -1,22 +1,24 @@
 name: "Fail fast - exercice 1"
 on:
-  workflow_dispatch:obs:
+  workflow_dispatch:
 jobs: 
   build:
     strategy:
       matrix:
-      #-------------------------
-  steps:
-  - name: Récupère le code source
-    uses: actions/checkout@v3
-  - name: Install .NET
-    uses: actions/setup-dotnet@v3
-    with:
-      dotnet-version: --------------------------
-  - name: Restore dependencies
-    run: dotnet restore
-  - name: Build
-    run: dotnet build --no-restore --configuration ${{ env.buildMode }}
-    env:
-      buildMode:-----------------------------------
+        dotnet: [4.2.x,5.0.x]
+        buildMode: [Debug, Release]
+    runs-on: windows-latest
+    steps:
+    - name: Récupère le code source
+      uses: actions/checkout@v3
+    - name: Install .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: ${{ matrix.dotnet }}
+    - name: Restore dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build --no-restore --configuration ${{ env.buildMode }}
+      env:
+        buildMode: ${{ matrix.buildMode }}
   
